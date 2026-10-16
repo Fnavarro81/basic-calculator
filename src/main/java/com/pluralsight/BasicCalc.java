@@ -16,20 +16,32 @@ public class BasicCalc {
         // Operator input
         System.out.println("Possible calculations:");
         System.out.println("(A)dd");
-        char A = '+';
         System.out.println("(S)ubtract");
-        char S = '-';
         System.out.println("(D)ivide");
-        char D = '/';
         System.out.println("(M)ultiply");
-        String M = "*";
         System.out.println("Please select an option: ");
         String operator = myScanner.next();
 
-        // Equation
-        String sum = num1 + " " + operator + " " + num2;
-        System.out.println(sum);
+        // Variable holding the answer
+        double result = 0;
 
+        // Equations with results
+        if (operator.equals("A")) {
+            result = num1 + num2;
+            System.out.println(num1 + "_+ " + num2 + " = " + result);
+        }
+        if (operator.equals("S")) {
+            result = num1 - num2;
+            System.out.println(num1 + "_- " + num2 + " = " + result);
+        }
+        if (operator.equals("D")) {
+            result = num1 / num2;
+            System.out.println(num1 + "_/ " + num2 + " = " + result);
+        }
+        if (operator.equals("M")) {
+            result = num1 * num2;
+            System.out.println(num1 + "_* " + num2 + " = " + result);
+        }
 
     }
 }
